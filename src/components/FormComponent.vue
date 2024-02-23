@@ -1,16 +1,16 @@
 <template>
-  <form action="">
+  <form method="POST" action="/feedback">
     <h3 class="txt-center">{{ $t("formTitle") }}</h3>
     <div class="form-controls">
-      <input type="text" :placeholder="$t(`namePlaceholder`)" required />
-      <input type="email" :placeholder="$t(`emailPlaceholder`)" required />
+      <input type="text" :placeholder="$t(`namePlaceholder`)" name="name" required />
+      <input type="email" :placeholder="$t(`emailPlaceholder`)" name="email" required />
       <!-- <input type="tel" :placeholder="$t(`phonePlaceholder`)" required />
       <vue-tel-input v-model="phone" :inputOptions="options"></vue-tel-input> -->
 
-      <vue-tel-input v-model="phone" :inputOptions="options"></vue-tel-input>
+      <vue-tel-input ref="phoneInput" v-model="phone" :inputOptions="options"></vue-tel-input>
 
-      <input type="number" :placeholder="$t(`pricePlaceholder`)" required />
-      <textarea rows="5" :placeholder="$t(`messagePlaceholder`)"></textarea>
+      <input type="number" :placeholder="$t(`pricePlaceholder`)" name="price" required />
+      <textarea rows="5" :placeholder="$t(`messagePlaceholder`)" name="comment"></textarea>
       <label for="checkbox_form">
         <input type="checkbox" id="checkbox_form" checked />
         <span>
@@ -18,7 +18,13 @@
           <a href="" target="_blank">{{ $t("checkboxTextTwo") }}</a>
         </span>
       </label>
-      <button class="btn btn-submit">{{ $t("btnSubmit") }}</button>
+      <div 
+        style="height: 100px"
+        id="captcha-container"
+        class="smart-captcha"
+        data-sitekey="ysc1_nueSrLYeD4d55tzIfcYIHPh2o6h39Sttd7QlL24bad557407"
+      ></div>      
+      <button type="submit"  class="btn btn-submit">{{ $t("btnSubmit") }}</button>
     </div>
   </form>
 </template>
@@ -34,6 +40,10 @@ export default {
       },
     };
   },
+  mounted() {
+    // Находим элемент input по референсу и устанавливаем атрибут name
+     this.$refs.phoneInput.$el.querySelector('input').setAttribute("name", "phone");
+  },  
   // methods: {
   //   placeholder() {
   //     return this.$t("phonePlaceholder");

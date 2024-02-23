@@ -1,5 +1,5 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
-  publicPath: `/domain_page_light_theme/`,
+  publicPath: `/templates/sigma_light/`,
   transpileDependencies: true
 })

@@ -6,7 +6,7 @@
         <span>{{ domainName }}</span> <br />
         {{ $t("sales") }}
       </h1>
-      <button class="btn btn-large">{{ $t("btnBuyNow") }}</button>
+      <a :href="metaTagValue" class="btn btn-large" id="shopbtn">{{ $t("btnBuyNow") }}</a>
     </div>
     <div class="right_content">
       <FormComponent></FormComponent>
@@ -25,6 +25,15 @@ export default {
   components: {
     FormComponent,
   },
+  mounted() {
+    const metaTagValue = document.head.querySelector('meta[name="shopuri"]').content;
+    this.metaTagValue = metaTagValue;
+  },
+  data() {
+    return {
+      metaTagValue: "",
+    };
+  },  
 };
 </script>
 

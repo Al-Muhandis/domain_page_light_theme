@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <HeaderComponenet></HeaderComponenet>
-    <MainComponent domain-name="%domain_name%"></MainComponent>
+    <MainComponent :domain-name="domainName"></MainComponent>
     <FooterComponent
       year="2024"
       :copyright-text="$t(`footerText`)"
@@ -21,6 +21,15 @@ export default {
     HeaderComponenet,
     FooterComponent,
     MainComponent,
+  },  
+  mounted() {
+    const domainName = document.querySelector('meta[name=\'domain-name\']').getAttribute('content');
+    this.domainName = domainName;
+  },
+  data() {
+    return {
+      domainName: "",
+    };
   },
 };
 </script>
