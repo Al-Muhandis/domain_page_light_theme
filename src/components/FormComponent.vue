@@ -43,6 +43,13 @@ export default {
   mounted() {
     // Находим элемент input по референсу и устанавливаем атрибут name
      this.$refs.phoneInput.$el.querySelector('input').setAttribute("name", "phone");
+     const priceMeta = document.querySelector('meta[name="price"]');
+     const priceValue = priceMeta ? priceMeta.getAttribute('content') : null;
+     
+     if (priceValue) {
+        const inputElement = this.$el.querySelector('input[name="price"]');
+        inputElement.setAttribute('value', priceValue);
+     }
   },  
   // methods: {
   //   placeholder() {
