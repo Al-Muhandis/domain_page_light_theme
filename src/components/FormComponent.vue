@@ -12,7 +12,7 @@
       <input type="number" :placeholder="$t(`pricePlaceholder`)" name="price" required />
       <textarea rows="5" :placeholder="$t(`messagePlaceholder`)" name="comment"></textarea>
       <label for="checkbox_form">
-        <input type="checkbox" id="checkbox_form" checked />
+        <input type="checkbox" id="checkbox_form" checked required />
         <span>
           {{ $t("checkboxTextOne") }}
           <a href="" target="_blank">{{ $t("checkboxTextTwo") }}</a>
