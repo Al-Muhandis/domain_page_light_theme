@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="domain-name" content="${title}">
     <meta name="shopuri" content="${shopuri}">
-    <meta name="price" content="${price}">
+    <meta name="price" content="${price}">    
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>${title}</title>
-    <script src="https://smartcaptcha.yandexcloud.net/captcha.js?render=onload&onload=smartCaptchaInit" async defer></script>    
+    <script src="https://smartcaptcha.yandexcloud.net/captcha.js?render=onload&onload=smartCaptchaInit" async defer></script>  
   </head>
   <body class="light">
     <noscript>
@@ -38,11 +38,11 @@
       };
 
       request.send(body);
-    } 
-  });
-</script>
+    };   
 
-<script>
+  });
+  
+   
   function callback(token) {
     console.log(token);
     if (token) {
@@ -83,8 +83,9 @@
     var resp = window.smartCaptcha.getResponse();
     console.log(resp);
     alert(resp);
-  }
+  } 
+    
 </script>
-
+  
   </body>
 </html>

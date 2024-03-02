@@ -6,7 +6,7 @@
         <span>{{ domainName }}</span> <br />
         {{ $t("sales") }}
       </h1>
-      <a :href="metaTagValue" class="btn btn-large" id="shopbtn">{{ $t("btnBuyNow") }}</a>
+      <button :onclick="aOnClick" class="btn btn-large" id="shopbtn" >{{ $t("btnBuyNow") }}</button>
     </div>
     <div class="right_content">
       <FormComponent></FormComponent>
@@ -28,6 +28,8 @@ export default {
   mounted() {
     const metaTagValue = document.head.querySelector('meta[name="shopuri"]').content;
     this.metaTagValue = metaTagValue;
+    const aOnClick = 'window.location.href = "' + metaTagValue + '"';
+    this.aOnClick = aOnClick;
   },
   data() {
     return {
