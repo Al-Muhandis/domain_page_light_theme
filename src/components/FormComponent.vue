@@ -22,9 +22,8 @@
         style="height: 100px"
         id="captcha-container"
         class="smart-captcha"
-        data-sitekey="ysc1_nueSrLYeD4d55tzIfcYIHPh2o6h39Sttd7QlL24bad557407"
       ></div>      
-      <button type="submit"  class="btn btn-submit">{{ $t("btnSubmit") }}</button>
+      <button type="submit" class="btn btn-submit" id="submitbtn" disabled="1">{{ $t("btnSubmit") }}</button>
     </div>
   </form>
 </template>

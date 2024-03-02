@@ -9,7 +9,7 @@
     <meta name="price" content="${price}">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>${title}</title>
-    <script src="https://smartcaptcha.yandexcloud.net/captcha.js" async defer></script>    
+    <script src="https://smartcaptcha.yandexcloud.net/captcha.js?render=onload&onload=smartCaptchaInit" async defer></script>    
   </head>
   <body class="light">
     <noscript>
@@ -17,6 +17,7 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->  
+    
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var btn = document.getElementById("shopbtn");
@@ -40,5 +41,50 @@
     } 
   });
 </script>
+
+<script>
+  function callback(token) {
+    console.log(token);
+    if (token) {
+      document
+        .getElementById('submitbtn')
+        .removeAttribute('disabled');
+    } else {
+      document
+        .getElementById('submitbtn')
+        .setAttribute('disabled', '1');
+    }
+  }
+
+  function smartCaptchaInit() {
+    if (!window.smartCaptcha) {
+      return;
+    }
+
+    window.smartCaptcha.render('captcha-container', {
+      sitekey: 'ysc1_nueSrLYeD4d55tzIfcYIHPh2o6h39Sttd7QlL24bad557407',
+      callback: callback,
+    });
+  }
+
+  function smartCaptchaReset() {
+    if (!window.smartCaptcha) {
+      return;
+    }
+
+    window.smartCaptcha.reset();
+  }
+
+  function smartCaptchaGetResponse() {
+    if (!window.smartCaptcha) {
+      return;
+    }
+
+    var resp = window.smartCaptcha.getResponse();
+    console.log(resp);
+    alert(resp);
+  }
+</script>
+
   </body>
 </html>
