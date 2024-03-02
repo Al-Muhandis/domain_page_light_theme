@@ -110,3 +110,11 @@ body.light {
     background: $dark-green;
     transition: all 0.4s ease;
 }
+
+.btn:disabled {
+  cursor: not-allowed;
+  background: #ccc; 
+  color: #999; 
+  -webkit-transform: none;
+  transform: none;
+}

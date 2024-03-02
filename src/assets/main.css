@@ -128,4 +128,12 @@ body.dark {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
+
+.btn:disabled {
+  cursor: not-allowed;
+  background: #ccc; 
+  color: #999; 
+  -webkit-transform: none;
+  transform: none;
+}
 /*# sourceMappingURL=main.css.map */
