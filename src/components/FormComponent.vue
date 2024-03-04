@@ -9,7 +9,6 @@
 
       <vue-tel-input ref="phoneInput" v-model="phone" :inputOptions="options"></vue-tel-input>
 
-      <input type="number" :placeholder="$t(`pricePlaceholder`)" name="price" required />
       <textarea rows="5" :placeholder="$t(`messagePlaceholder`)" name="comment"></textarea>
       <label for="checkbox_form">
         <input type="checkbox" id="checkbox_form" checked required />
@@ -42,13 +41,6 @@ export default {
   mounted() {
     // Находим элемент input по референсу и устанавливаем атрибут name
      this.$refs.phoneInput.$el.querySelector('input').setAttribute("name", "phone");
-     const priceMeta = document.querySelector('meta[name="price"]');
-     const priceValue = priceMeta ? priceMeta.getAttribute('content') : null;
-     
-     if (priceValue) {
-        const inputElement = this.$el.querySelector('input[name="price"]');
-        inputElement.setAttribute('value', priceValue);
-     }
   },  
   // methods: {
   //   placeholder() {
