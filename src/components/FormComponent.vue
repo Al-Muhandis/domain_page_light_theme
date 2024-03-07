@@ -17,15 +17,17 @@
           <a href="" target="_blank">{{ $t("checkboxTextTwo") }}</a>
         </span>
       </label>
-      <div 
-        style="height: 100px"
-        id="captcha-container"
-        class="smart-captcha"
-      ></div>      
+      <SmartCaptcha :sitekey="sitekey" /> 
       <button type="submit" class="btn btn-submit" id="submitbtn" disabled="1">{{ $t("btnSubmit") }}</button>
     </div>
   </form>
 </template>
+
+<script setup>
+import { SmartCaptcha } from 'vue3-smart-captcha'
+
+const sitekey = 'ysc1_nueSrLYeD4d55tzIfcYIHPh2o6h39Sttd7QlL24bad557407' // import.meta.env.VITE_YANDEX_SMART_CAPTCHA_KEY
+</script>
 
 <script>
 export default {
