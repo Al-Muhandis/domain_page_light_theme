@@ -17,7 +17,7 @@
           <a href="" target="_blank">{{ $t("checkboxTextTwo") }}</a>
         </span>
       </label>
-      <SmartCaptcha :sitekey="sitekey" /> 
+      <SmartCaptcha :sitekey="sitekey" :callback=callbackFun />
       <button type="submit" class="btn btn-submit" id="submitbtn" disabled="1">{{ $t("btnSubmit") }}</button>
     </div>
   </form>
@@ -26,7 +26,7 @@
 <script setup>
 import { SmartCaptcha } from 'vue3-smart-captcha'
 
-const sitekey = 'ysc1_nueSrLYeD4d55tzIfcYIHPh2o6h39Sttd7QlL24bad557407' // import.meta.env.VITE_YANDEX_SMART_CAPTCHA_KEY
+const sitekey = 'ysc1_nueSrLYeD4d55tzIfcYIHPh2o6h39Sttd7QlL24bad557407'
 </script>
 
 <script>
@@ -50,6 +50,20 @@ export default {
   //   },
   // },
 };
+
+  function callbackFun(token) {
+    console.log(token);
+    if (token) {
+      document
+        .getElementById('submitbtn')
+        .removeAttribute('disabled');
+    } else {
+      document
+        .getElementById('submitbtn')
+        .setAttribute('disabled', '1');
+    }
+  }
+  
 </script>
 
 <style scoped lang="scss">
