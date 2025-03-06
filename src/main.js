@@ -27,8 +27,8 @@ const localStorageLang = localStorage.getItem('locale')
 
 const i18n = createI18n({
     legacy: false,
-    locale: localStorageLang || 'en',
-    fallbackLocale: 'en',
+    locale: localStorageLang || 'ru',
+    fallbackLocale: 'ru',
     messages: {
         ar: ar,
         cn: cn,
