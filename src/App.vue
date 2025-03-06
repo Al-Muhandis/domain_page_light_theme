@@ -3,7 +3,7 @@
     <HeaderComponenet></HeaderComponenet>
     <MainComponent :domain-name="domainName"></MainComponent>
     <FooterComponent
-      year="2024"
+      year="2025"
       :copyright-text="$t(`footerText`)"
       company-name="SigmaParking"
     ></FooterComponent>
