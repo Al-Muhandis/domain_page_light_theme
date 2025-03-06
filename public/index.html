@@ -18,28 +18,29 @@
     <!-- built files will be auto injected -->  
     
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
+
+    document.addEventListener("DOMContentLoaded", function() {
     var btn = document.getElementById("shopbtn");
     btn.addEventListener("click", sendRequest);
 
     function sendRequest(event) {
       var request = new XMLHttpRequest();
-      var body = "host=" + encodeURIComponent("${host}");
+      var body = "host=" + encodeURIComponent("${host}")+"&formhash=${formhash}&formload=${formload}";
       request.open("POST", "/onclick");
       request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
       
       request.onreadystatechange = function() {
         if (request.readyState === 4 && request.status === 200) {
-          // Обработка успешного ответа от сервера
+          // success
         } else {
-          // Обработка ошибок
+          // error
         }
       };
 
       request.send(body);
     }; 
   });
-
+  
 </script>
   
   </body>
