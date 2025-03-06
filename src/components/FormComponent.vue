@@ -9,7 +9,7 @@
 
       <vue-tel-input ref="phoneInput" v-model="phone" :inputOptions="options"></vue-tel-input>
 
-      <textarea rows="5" :placeholder="$t(`messagePlaceholder`)" name="comment"></textarea>
+      <textarea rows="5" :placeholder="$t(`messagePlaceholder`)" name="comment" required></textarea>
       <label for="checkbox_form">
         <input type="checkbox" id="checkbox_form" checked required />
         <span>
