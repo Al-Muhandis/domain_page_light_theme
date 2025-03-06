@@ -4,9 +4,8 @@
       <h1 class="txt-center">
         {{ $t("domainName") }} <br />
         <span>{{ domainName }}</span> <br />
-        {{ $t("sales") }}
+        {{ $t("registered") }}
       </h1>
-      <button :onclick="aOnClick" class="btn btn-large" id="shopbtn" >{{ $t("btnBuyNow") }}</button>
     </div>
     <div class="right_content">
       <FormComponent></FormComponent>
