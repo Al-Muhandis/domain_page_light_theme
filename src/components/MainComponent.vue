@@ -8,22 +8,15 @@
       </h1>
       <button :onclick="aOnClick" class="btn btn-large" id="shopbtn" >{{ $t("btnBuyNow") }}</button>
     </div>
-    <div class="right_content">
-      <FormComponent></FormComponent>
-    </div>
   </main>
 </template>
 
 <script>
-import FormComponent from "./FormComponent.vue";
 
 export default {
   name: "MainComponent",
   props: {
     domainName: String,
-  },
-  components: {
-    FormComponent,
   },
   mounted() {
     const metaTagValue = document.head.querySelector('meta[name="shopuri"]').content;
@@ -43,7 +36,7 @@ export default {
 main {
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(2, 1fr);
+ 
   grid-gap: 40px;
 
   @media (max-width: 900px) {
