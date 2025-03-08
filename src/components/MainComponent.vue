@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main :class="{ 'only-button': ONLY_BUTTON }">
     <div class="left_content">
       <h1 class="txt-center">
         {{ $t("domainName") }} <br />
@@ -15,7 +15,7 @@
         {{ $t("btnBuyNow") }}
       </button>
     </div>
-    <div class="right_content">
+    <div  v-if="!ONLY_BUTTON" class="right_content">
       <FormComponent></FormComponent>
     </div>
   </main>
@@ -41,7 +41,8 @@ export default {
   data() {
     return {
       metaTagValue: "",
-      ONLY_FORM: process.env.ONLY_FORM
+      ONLY_FORM: process.env.ONLY_FORM,
+      ONLY_BUTTON: process.env.ONLY_BUTTON
     };
   },  
 };
@@ -58,6 +59,10 @@ main {
     grid-template-columns: repeat(1, 1fr);
     margin-top: 40px;
     grid-gap: calc(20px + (40 - 20) * ((100vw - 375px) / (900 - 375)));
+  }
+
+  &.only-button {
+    grid-template-columns: 1fr; 
   }
 
   .left_content {
