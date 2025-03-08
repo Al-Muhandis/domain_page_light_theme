@@ -1,6 +1,7 @@
 {
   "domainName": "Domain name",
   "sales": "for sale",
+  "registered" : "registered",
   "btnBuyNow": "buy now",
   "formTitle": "Feedback",
   "namePlaceholder": "Name",

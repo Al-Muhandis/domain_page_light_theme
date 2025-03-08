@@ -4,9 +4,16 @@
       <h1 class="txt-center">
         {{ $t("domainName") }} <br />
         <span>{{ domainName }}</span> <br />
-        {{ $t("sales") }}
+        {{ $t(ONLY_FORM ? "registered" : "sales") }}
       </h1>
-      <button :onclick="aOnClick" class="btn btn-large" id="shopbtn" >{{ $t("btnBuyNow") }}</button>
+      <button
+        v-if="!ONLY_FORM"
+        :onclick="aOnClick"
+        class="btn btn-large"
+        id="shopbtn"
+      >
+        {{ $t("btnBuyNow") }}
+      </button>
     </div>
   </main>
 </template>
@@ -27,6 +34,7 @@ export default {
   data() {
     return {
       metaTagValue: "",
+      ONLY_FORM: process.env.ONLY_FORM
     };
   },  
 };
