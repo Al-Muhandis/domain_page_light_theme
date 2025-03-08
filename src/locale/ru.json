@@ -1,7 +1,7 @@
 {
     "domainName": "Доменное имя",
     "sales": "продается",
-    "registered": "зарегистрировано",
+    "registered" : "зарегистрировано",
     "btnBuyNow": "купить сейчас",
     "formTitle": "Обратная связь",
     "namePlaceholder": "Имя",
