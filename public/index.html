@@ -21,8 +21,10 @@
 
     document.addEventListener("DOMContentLoaded", function() {
     var btn = document.getElementById("shopbtn");
-    btn.addEventListener("click", sendRequest);
-
+    if (btn) {
+        btn.addEventListener("click", sendRequest);
+    }
+    
     function sendRequest(event) {
       var request = new XMLHttpRequest();
       var body = "host=" + encodeURIComponent("${host}")+"&formhash=${formhash}&formload=${formload}";
