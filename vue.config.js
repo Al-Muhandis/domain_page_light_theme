@@ -8,7 +8,7 @@ const args = minimist(process.argv.slice(2))
 const defaultPublicPath = '/templates/sigma_light/'
 
 const publicPath = args.publicpath || defaultPublicPath
-const defaultLocale = args.defaultLocale || 'ru'
+const defaultLocale = args.defaultlocale || 'ru'
 const onlyForm = args.onlyform === 'true'
 const onlyButton = args.onlybutton === 'true'
 const outputDir = path.resolve(__dirname, `dist${publicPath}`)

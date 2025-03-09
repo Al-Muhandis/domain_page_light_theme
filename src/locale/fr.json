@@ -1,6 +1,7 @@
 {
   "domainName": "Nom de domaine",
   "sales": "à vendre",
+  "registered" : "est enregistré",
   "btnBuyNow": "acheter maintenant",
   "formTitle": "Commentaires",
   "namePlaceholder": "Nom",
