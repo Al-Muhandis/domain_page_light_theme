@@ -4,7 +4,7 @@
       <h1 class="txt-center">
         {{ $t("domainName") }} <br />
         <span>{{ domainName }}</span> <br />
-        {{ $t(ONLY_FORM ? "registered" : "sales") }}
+        {{ $t(IS_SALE ? "sales" : "registered") }}
       </h1>
       <button
         v-if="!ONLY_FORM"
@@ -42,7 +42,8 @@ export default {
     return {
       metaTagValue: "",
       ONLY_FORM: process.env.ONLY_FORM,
-      ONLY_BUTTON: process.env.ONLY_BUTTON
+      ONLY_BUTTON: process.env.ONLY_BUTTON,
+      IS_SALE: process.env.IS_SALE
     };
   },  
 };
