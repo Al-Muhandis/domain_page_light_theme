@@ -12,5 +12,6 @@
   "checkboxTextOne": "I accept the terms of",
   "checkboxTextTwo": "Rules for the processing and use of personal data",
   "btnSubmit": "Send",
-  "footerText": "© The domain is parked using the service"
+  "footerText": "© The domain is parked using the service",
+  "feedbackSuccess": "Your message was successfully sent"
 }

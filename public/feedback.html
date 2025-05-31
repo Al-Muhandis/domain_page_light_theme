@@ -1,25 +1,31 @@
 <!doctype html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="domain-name" content="${title}">
-    <meta name="shopuri" content="${shopuri}">
-    <meta name="price" content="${price}">
-    <link rel="icon" href="/templates/${templatename}/favicon.ico">
-    <link href="/templates/${templatename}/css/app.css" rel="stylesheet">
-    <title>${title}</title>
-  </head>
-  <body>
-   <div class="wrapper">
-      <header><div class="logo"><a href="/"><img src="/templates/${templatename}/img/logo.d0e2cd9d.svg"></a></div></header>
-      <main>
-	      <div class="left_content">
-	      	<h2 class="txt-center">Your message was successfully sent</h2>
-	      	<hr>
-	      	<h4 class="txt-center">You can return to <a href="/">home page</a></h4>
-	      </div>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+ 		<meta name="domain-name" content="${title}">
+		<meta name="shopuri" content="${shopuri}">
+		<meta name="price" content="${price}">
+		<link rel="icon" href="/templates/${templatename}/favicon.ico">
+		<link href="/templates/${templatename}/css/app.css" rel="stylesheet">
+		<title>${title}</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header><div class="logo"><a href="/"><img src="/templates/${templatename}/img/logo.d0e2cd9d.svg"></a></div></header>
+			<main>
+				<div class="left_content">
+					<h2 class="txt-center" ud="feedback-message">Your message was successfully sent</h2>
+					<hr>
+					<h4 class="txt-center">You can return to <a href="/">home page</a></h4>
+				</div>
+				<script>
+					document.addEventListener('DOMContentLoaded', function() {
+					const message = window.__sharedVars?.successMessage || 'Your message was successfully sent';
+					document.getElementById('feedback-message').textContent = message;
+					});
+				</script>
       </main>
       <footer><p><strong>2025</strong> © The domain is parked using the service <strong>SigmaParking</strong></p></footer>
     </div>
