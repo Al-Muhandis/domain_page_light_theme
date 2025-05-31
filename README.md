@@ -22,7 +22,7 @@ npm run lint
 
 ### cli parameters
 ```
-npm run build -- --defaultlocale=ru --publicpath=/templates/sigma_light/ --issale=true
+npm run build -- --defaultlocale=ru --publicpath=/templates/sale/ --issale=true
 npm run build -- --defaultlocale=ru --publicpath=/templates/button/ --onlyform=false --onlybutton=true --issale=true
 npm run build -- --defaultlocale=ru --publicpath=/templates/inquiry/ --onlyform=true --onlybutton=false --issale=false
 npm run build -- --defaultlocale=ru --publicpath=/templates/saleinquiry/ --onlyform=true --onlybutton=false --issale=true
