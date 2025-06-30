@@ -1,13 +1,14 @@
 <!doctype html>
-<html lang="">
+<html lang="${defaultlocale}">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
  		<meta name="domain-name" content="${title}">
 		<meta name="shopuri" content="${shopuri}">
-		<meta name="price" content="${price}">
-		<link rel="icon" href="/templates/${templatename}/favicon.ico">
+                <meta name="price" content="${price}">
+                <meta name="default-locale" content="${defaultlocale}">
+                <link rel="icon" href="/templates/${templatename}/favicon.ico">
 		<link href="/templates/${templatename}/css/app.css" rel="stylesheet">
 		<title>${title}</title>
 	</head>
@@ -20,8 +21,9 @@
 					<hr>
 					<h4 class="txt-center">You can return to <a href="/">home page</a></h4>
 				</div>
-				<script>
-					document.addEventListener('DOMContentLoaded', function() {
+                                <script>
+                                        window.DEFAULT_LOCALE = document.querySelector('meta[name="default-locale"]').getAttribute('content');
+                                        document.addEventListener('DOMContentLoaded', function() {
 					const message = window.__sharedVars?.successMessage || 'Your message was successfully sent';
 					document.getElementById('feedback-message').textContent = message;
 					});

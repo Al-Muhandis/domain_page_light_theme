@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="${defaultlocale}">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,7 @@
     <meta name="domain-name" content="${title}">
     <meta name="shopuri" content="${shopuri}">
     <meta name="price" content="${price}">
+    <meta name="default-locale" content="${defaultlocale}">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>${title}</title> 
   </head>
@@ -18,6 +19,7 @@
     <!-- built files will be auto injected -->  
     
 <script>
+    window.DEFAULT_LOCALE = document.querySelector('meta[name="default-locale"]').getAttribute('content');
 
     document.addEventListener("DOMContentLoaded", function() {
     var btn = document.getElementById("shopbtn");
