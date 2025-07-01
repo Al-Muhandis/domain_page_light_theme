@@ -18,160 +18,13 @@
         <div class="language-list" v-if="show">
           <div class="language-list_container">
             <button
-              id="AR"
+              v-for="lang in languages"
+              :key="lang.code"
+              :id="lang.code.toUpperCase()"
               class="btn btn-lang"
-              @click="
-                ($i18n.locale = `ar`),
-                  (show = !show),
-                  currentLocale(),
-                  reloadPage()
-              "
+              @click="changeLocale(lang.code)"
             >
-              AR - اَلْعَرَبِيَّةُ
-            </button>
-            <button
-              id="CN"
-              class="btn btn-lang"
-              @click="
-                ($i18n.locale = `cn`),
-                  (show = !show),
-                  currentLocale(),
-                  reloadPage()
-              "
-            >
-              CN - 中文
-            </button>
-            <button
-              id="DE"
-              class="btn btn-lang"
-              @click="
-                ($i18n.locale = `de`),
-                  (show = !show),
-                  currentLocale(),
-                  reloadPage()
-              "
-            >
-              DE - Deutsch
-            </button>
-            <button
-              id="EN"
-              class="btn btn-lang"
-              @click="
-                ($i18n.locale = `en`),
-                  (show = !show),
-                  currentLocale(),
-                  reloadPage()
-              "
-            >
-              EN - English
-            </button>
-            <button
-              id="ES"
-              class="btn btn-lang"
-              @click="
-                ($i18n.locale = `es`),
-                  (show = !show),
-                  currentLocale(),
-                  reloadPage()
-              "
-            >
-              ES - Español
-            </button>
-            <button
-              id="FR"
-              class="btn btn-lang"
-              @click="
-                ($i18n.locale = `fr`),
-                  (show = !show),
-                  currentLocale(),
-                  reloadPage()
-              "
-            >
-              FR - Français
-            </button>
-            <button
-              id="IT"
-              class="btn btn-lang"
-              @click="
-                ($i18n.locale = `it`),
-                  (show = !show),
-                  currentLocale(),
-                  reloadPage()
-              "
-            >
-              IT - Italian
-            </button>
-            <button
-              id="PL"
-              class="btn btn-lang"
-              @click="
-                ($i18n.locale = `pl`),
-                  (show = !show),
-                  currentLocale(),
-                  reloadPage()
-              "
-            >
-              PL - Polski
-            </button>
-            <button
-              id="PT"
-              class="btn btn-lang"
-              @click="
-                ($i18n.locale = `pt`),
-                  (show = !show),
-                  currentLocale(),
-                  reloadPage()
-              "
-            >
-              PT - Português
-            </button>
-            <button
-              id="RU"
-              class="btn btn-lang"
-              @click="
-                ($i18n.locale = `ru`),
-                  (show = !show),
-                  currentLocale(),
-                  reloadPage()
-              "
-            >
-              RU - Русский
-            </button>
-            <button
-              id="TR"
-              class="btn btn-lang"
-              @click="
-                ($i18n.locale = `tr`),
-                  (show = !show),
-                  currentLocale(),
-                  reloadPage()
-              "
-            >
-              TR - Türkiye
-            </button>
-            <button
-              id="UA"
-              class="btn btn-lang"
-              @click="
-                ($i18n.locale = `ua`),
-                  (show = !show),
-                  currentLocale(),
-                  reloadPage()
-              "
-            >
-              UA - Українська
-            </button>
-            <button
-              id="VN"
-              class="btn btn-lang"
-              @click="
-                ($i18n.locale = `vn`),
-                  (show = !show),
-                  currentLocale(),
-                  reloadPage()
-              "
-            >
-              VN - Tiếng Việt
+              {{ lang.label }}
             </button>
           </div>
         </div>
@@ -186,9 +39,30 @@ export default {
   data() {
     return {
       show: false,
+      languages: [
+        { code: "ar", label: "AR - اَلْعَرَبِيَّةُ" },
+        { code: "cn", label: "CN - 中文" },
+        { code: "de", label: "DE - Deutsch" },
+        { code: "en", label: "EN - English" },
+        { code: "es", label: "ES - Español" },
+        { code: "fr", label: "FR - Français" },
+        { code: "it", label: "IT - Italian" },
+        { code: "pl", label: "PL - Polski" },
+        { code: "pt", label: "PT - Português" },
+        { code: "ru", label: "RU - Русский" },
+        { code: "tr", label: "TR - Türkiye" },
+        { code: "ua", label: "UA - Українська" },
+        { code: "vn", label: "VN - Tiếng Việt" },
+      ],
     };
   },
   methods: {
+    changeLocale(code) {
+      this.$i18n.locale = code;
+      this.show = false;
+      this.currentLocale();
+      this.reloadPage();
+    },
     currentLocale() {
       localStorage.setItem("locale", this.$i18n.locale);
     },
