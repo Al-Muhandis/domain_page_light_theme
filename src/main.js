@@ -24,11 +24,12 @@ import ua from './locale/ua.json'
 import vn from './locale/vn.json'
 
 const localStorageLang = localStorage.getItem('locale')
+const serverDefaultLang = window.DEFAULT_LOCALE
 
 const i18n = createI18n({
     legacy: false,
-    locale: localStorageLang || process.env.DEFAULT_LOCALE,
-    fallbackLocale: process.env.DEFAULT_LOCALE,
+    locale: localStorageLang || serverDefaultLang || process.env.DEFAULT_LOCALE,
+    fallbackLocale: serverDefaultLang || process.env.DEFAULT_LOCALE,
     messages: {
         ar: ar,
         cn: cn,
