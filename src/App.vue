@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <HeaderComponenet></HeaderComponenet>
+    <HeaderComponent></HeaderComponent>
     <MainComponent :domain-name="domainName"></MainComponent>
     <FooterComponent
       year="2025"
@@ -11,14 +11,14 @@
 </template>
 
 <script>
-import HeaderComponenet from "./components/HeaderComponent.vue";
+import HeaderComponent from "./components/HeaderComponent.vue";
 import MainComponent from "./components/MainComponent.vue";
 import FooterComponent from "./components/FooterComponent.vue";
 
 export default {
   name: "App",
   components: {
-    HeaderComponenet,
+    HeaderComponent,
     FooterComponent,
     MainComponent,
   },  

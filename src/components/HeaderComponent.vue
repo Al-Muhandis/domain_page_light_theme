@@ -182,8 +182,7 @@
 
 <script>
 export default {
-  name: "HeaderComponenet,",
-  el: "#showLangList",
+  name: "HeaderComponent",
   data() {
     return {
       show: false,
