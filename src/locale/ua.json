@@ -1,6 +1,7 @@
 {
   "domainName": "Доменне ім'я",
   "sales": "продається",
+  "registered": "зареєстровано",
   "btnBuyNow": "купити зараз",
   "formTitle": "Зворотний зв'язок",
   "namePlaceholder": "Ім'я",
@@ -11,5 +12,7 @@
   "checkboxTextOne": "Я приймаю умови",
   "checkboxTextTwo": "Правила обробки та використання персональних даних",
   "btnSubmit": "Надіслати",
-  "footerText": "© Домен припаркований за допомогою сервісу"
+  "footerText": "© Домен припаркований за допомогою сервісу",
+  "footerAdminInfo": "Сервіс SigmaParking не є адміністратором доменного імені {domainName}",
+  "feedbackSuccess": "Ваше повідомлення успішно відправлено"
 }

@@ -12,5 +12,7 @@
   "checkboxTextOne": "Akceptuję warunki",
   "checkboxTextTwo": "Zasady przetwarzania i wykorzystywania danych osobowych",
   "btnSubmit": "Wyślij",
-  "footerText": "© Domena jest zaparkowana przy użyciu usługi"
+  "footerText": "© Domena jest zaparkowana przy użyciu usługi",
+  "footerAdminInfo": "Usługa SigmaParking nie jest administratorem nazwy domeny {domainName}",
+  "feedbackSuccess": "Twoja wiadomość została pomyślnie wysłana"
 }

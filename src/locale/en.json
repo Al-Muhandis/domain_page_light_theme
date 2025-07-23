@@ -13,5 +13,6 @@
   "checkboxTextTwo": "Rules for the processing and use of personal data",
   "btnSubmit": "Send",
   "footerText": "© The domain is parked using the service",
+  "footerAdminInfo": "SigmaParking service is not the administrator of the domain name {domainName}",
   "feedbackSuccess": "Your message was successfully sent"
 }

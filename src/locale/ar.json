@@ -12,5 +12,7 @@
     "checkboxTextOne": "أوافق على شروط",
     "checkboxTextTwo": "قواعد معالجة واستخدام البيانات الشخصية",
     "btnSubmit": "إرسال",
-    "footerText": "© النطاق موقوف باستخدام الخدمة"
+    "footerText": "© النطاق موقوف باستخدام الخدمة",
+    "footerAdminInfo": "خدمة SigmaParking ليست هي المسؤول عن اسم المجال {domainName}",
+    "feedbackSuccess": "تم إرسال رسالتك بنجاح"
 }

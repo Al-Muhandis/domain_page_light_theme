@@ -12,5 +12,7 @@
   "checkboxTextOne": "Aceito os termos de",
   "checkboxTextTwo": "Regras para tratamento e utilização de dados pessoais",
   "btnSubmit": "Enviar",
-  "footerText": "© O domínio está estacionado usando o serviço"
+  "footerText": "© O domínio está estacionado usando o serviço",
+  "footerAdminInfo": "O serviço SigmaParking não é o administrador do nome de domínio {domainName}",
+  "feedbackSuccess": "Sua mensagem foi enviada com sucesso"
 }

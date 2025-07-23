@@ -12,5 +12,7 @@
   "checkboxTextOne": "Tôi chấp nhận các điều khoản của",
   "checkboxTextTwo": "Quy tắc xử lý và sử dụng dữ liệu cá nhân",
   "btnSubmit": "Gửi",
-  "footerText": "© Tên miền được sử dụng dịch vụ"
+  "footerText": "© Tên miền được sử dụng dịch vụ",
+  "footerAdminInfo": "Dịch vụ SigmaParking không phải là quản trị viên của tên miền {domainName}",
+  "feedbackSuccess": "Tin nhắn của bạn đã được gửi thành công"
 }

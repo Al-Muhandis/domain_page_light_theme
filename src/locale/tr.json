@@ -12,5 +12,7 @@
   "checkboxTextOne": "Şartlarını kabul ediyorum",
   "checkboxTextTwo": "Kişisel verilerin işlenmesi ve kullanımına ilişkin kurallar",
   "btnSubmit": "Gönder",
-  "footerText": "© Alan adı hizmet kullanılarak park edildi"
+  "footerText": "© Alan adı hizmet kullanılarak park edildi",
+  "footerAdminInfo": "SigmaParking hizmeti {domainName} alan adının yöneticisi değildir",
+  "feedbackSuccess": "Mesajınız başarıyla gönderildi"
 }

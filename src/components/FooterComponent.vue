@@ -2,8 +2,7 @@
   <footer>
     <p>
       <strong>{{ year }}</strong>
-      {{ copyrightText }}
-      <strong>{{ companyName }}</strong>
+       {{ fullFooterText }}
     </p>
   </footer>
 </template>
@@ -15,10 +14,31 @@ export default {
     year: Number,
     copyrightText: String,
     companyName: String,
+	domainName: String
   },
   data() {
     return {};
   },
+	computed: {
+    fullFooterText() {
+      let firstPart = `${this.copyrightText} ${this.companyName}`;
+     if (this.domainName && this.$t) {
+        try {
+          // Используем $t для перевода второй части с подстановкой домена
+          const secondPart = this.$t('footerAdminInfo', { domainName: this.domainName });
+          // Объединяем части через ' | '
+          return `${firstPart} | ${secondPart}`;
+        } catch (e) {
+          console.warn('Translation key "footerAdminInfo" not found.');
+          // Если перевод не найден, возвращаем только первую часть
+          return firstPart;
+        }
+      } else {
+         // Если доменное имя отсутствует, возвращаем только первую часть
+         return firstPart;
+      }
+    }
+  }
 };
 </script>
 

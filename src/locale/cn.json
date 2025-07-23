@@ -12,5 +12,7 @@
      "checkboxTextOne": "我接受以下條款",
      "checkboxTextTwo": "個人資料處理與使用規則",
      "btnSubmit": "發送",
-     "footerText": "© 該網域已使用該服務停放"
+     "footerText": "© 該網域已使用該服務停放",
+     "footerAdminInfo": "SigmaParking服務不是網域名稱{domainName}的管理者",
+     "feedbackSuccess": "您的訊息已成功發送"
 }

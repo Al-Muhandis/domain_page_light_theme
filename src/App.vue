@@ -6,6 +6,7 @@
       year="2025"
       :copyright-text="$t(`footerText`)"
       company-name="SigmaParking"
+      :domain-name="domainName"
     ></FooterComponent>
   </div>
 </template>
@@ -23,8 +24,13 @@ export default {
     MainComponent,
   },  
   mounted() {
-    const domainName = document.querySelector('meta[name=\'domain-name\']').getAttribute('content');
-    this.domainName = domainName;
+    const metaTag = document.querySelector('meta[name=\'domain-name\']');
+    if (metaTag) {
+       const domainName = metaTag.getAttribute('content');
+       if (domainName) {
+           this.domainName = domainName;
+       }
+    }
   },
   data() {
     return {
