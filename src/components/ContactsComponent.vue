@@ -34,7 +34,7 @@
           </svg>
         </div>
         <a :href="`tel:${phoneContact}`" class="contact-link">
-          {{ phoneContact }}
+          +{{ phoneContact }}
         </a>
       </div>
 
