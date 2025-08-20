@@ -11,6 +11,7 @@ const publicPath = args.publicpath || defaultPublicPath
 const defaultLocale = args.defaultlocale || 'ru'
 const onlyForm = args.onlyform === 'true'
 const onlyButton = args.onlybutton === 'true'
+const onlyContacts = args.onlycontacts === 'true'
 const outputDir = path.resolve(__dirname, `dist${publicPath}`)
 const isSale = args.issale === 'true'
 
@@ -25,6 +26,7 @@ module.exports = defineConfig({
         'process.env.DEFAULT_LOCALE': JSON.stringify(defaultLocale),
         'process.env.ONLY_FORM': JSON.stringify(onlyForm),
         'process.env.ONLY_BUTTON': JSON.stringify(onlyButton),
+        'process.env.ONLY_CONTACTS': JSON.stringify(onlyContacts),
         'process.env.IS_SALE': JSON.stringify(isSale),
       }),
     ],

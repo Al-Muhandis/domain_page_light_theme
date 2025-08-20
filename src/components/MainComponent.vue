@@ -7,7 +7,7 @@
         {{ $t(IS_SALE ? "sales" : "registered") }}
       </h1>
       <button
-        v-if="!ONLY_FORM"
+        v-if="!ONLY_FORM && !ONLY_CONTACTS"
         :onclick="aOnClick"
         class="btn btn-large"
         id="shopbtn"
@@ -15,14 +15,16 @@
         {{ $t("btnBuyNow") }}
       </button>
     </div>
-    <div  v-if="!ONLY_BUTTON" class="right_content">
-      <FormComponent></FormComponent>
+    <div v-if="!ONLY_BUTTON" class="right_content">
+      <FormComponent v-if="!ONLY_CONTACTS"></FormComponent>
+      <ContactsComponent v-if="ONLY_CONTACTS"></ContactsComponent>
     </div>
   </main>
 </template>
 
 <script>
 import FormComponent from "./FormComponent.vue";
+import ContactsComponent from "./ContactsComponent.vue";
 
 export default {
   name: "MainComponent",
@@ -31,6 +33,7 @@ export default {
   },
   components: {
     FormComponent,
+    ContactsComponent,
   },
   mounted() {
     const metaTagValue = document.head.querySelector('meta[name="shopuri"]').content;
@@ -43,6 +46,7 @@ export default {
       metaTagValue: "",
       ONLY_FORM: process.env.ONLY_FORM,
       ONLY_BUTTON: process.env.ONLY_BUTTON,
+      ONLY_CONTACTS: process.env.ONLY_CONTACTS,
       IS_SALE: process.env.IS_SALE
     };
   },  
