@@ -15,5 +15,6 @@
   "btnSubmit": "Gửi",
   "footerText": "© Tên miền được sử dụng dịch vụ",
   "footerAdminInfo": "Dịch vụ SigmaParking không phải là quản trị viên của tên miền {domainName}",
-  "feedbackSuccess": "Tin nhắn của bạn đã được gửi thành công"
+  "feedbackSuccess": "Tin nhắn của bạn đã được gửi thành công",
+  "contactMessage": "Tôi quan tâm đến việc mua tên miền {domainName}"
 }

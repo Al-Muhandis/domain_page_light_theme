@@ -15,5 +15,6 @@
   "btnSubmit": "Wyślij",
   "footerText": "© Domena jest zaparkowana przy użyciu usługi",
   "footerAdminInfo": "Usługa SigmaParking nie jest administratorem nazwy domeny {domainName}",
-  "feedbackSuccess": "Twoja wiadomość została pomyślnie wysłana"
+  "feedbackSuccess": "Twoja wiadomość została pomyślnie wysłana",
+  "contactMessage": "Jestem zainteresowany zakupem domeny {domainName}"
 }

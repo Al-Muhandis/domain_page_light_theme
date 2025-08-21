@@ -15,5 +15,6 @@
      "btnSubmit": "發送",
      "footerText": "© 該網域已使用該服務停放",
      "footerAdminInfo": "SigmaParking服務不是網域名稱{domainName}的管理者",
-     "feedbackSuccess": "您的訊息已成功發送"
+     "feedbackSuccess": "您的訊息已成功發送",
+     "contactMessage": "我有興趣購買域名 {domainName}"
 }

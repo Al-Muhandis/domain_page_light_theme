@@ -15,5 +15,6 @@
     "btnSubmit": "إرسال",
     "footerText": "© النطاق موقوف باستخدام الخدمة",
     "footerAdminInfo": "خدمة SigmaParking ليست هي المسؤول عن اسم المجال {domainName}",
-    "feedbackSuccess": "تم إرسال رسالتك بنجاح"
+    "feedbackSuccess": "تم إرسال رسالتك بنجاح",
+    "contactMessage": "أنا مهتم بشراء النطاق {domainName}"
 }

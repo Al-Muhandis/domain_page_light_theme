@@ -15,5 +15,6 @@
      "btnSubmit": "Senden",
      "footerText": "© Die Domain ist über den Dienst geparkt",
      "footerAdminInfo": "Der SigmaParking-Service ist nicht der Administrator des Domänennamens {domainName}",
-     "feedbackSuccess": "Ihre Nachricht wurde erfolgreich gesendet"
+     "feedbackSuccess": "Ihre Nachricht wurde erfolgreich gesendet",
+     "contactMessage": "Ich bin am Kauf der Domain {domainName} interessiert"
 }

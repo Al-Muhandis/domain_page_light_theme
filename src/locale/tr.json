@@ -15,5 +15,6 @@
   "btnSubmit": "Gönder",
   "footerText": "© Alan adı hizmet kullanılarak park edildi",
   "footerAdminInfo": "SigmaParking hizmeti {domainName} alan adının yöneticisi değildir",
-  "feedbackSuccess": "Mesajınız başarıyla gönderildi"
+  "feedbackSuccess": "Mesajınız başarıyla gönderildi",
+  "contactMessage": "{domainName} alanını satın almakla ilgileniyorum"
 }

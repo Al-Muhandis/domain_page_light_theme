@@ -15,5 +15,6 @@
   "btnSubmit": "Send",
   "footerText": "© The domain is parked using the service",
   "footerAdminInfo": "SigmaParking service is not the administrator of the domain name {domainName}",
-  "feedbackSuccess": "Your message was successfully sent"
+  "feedbackSuccess": "Your message was successfully sent",
+  "contactMessage": "I am interested in purchasing the domain {domainName}"
 }

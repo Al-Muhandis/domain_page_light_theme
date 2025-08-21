@@ -15,5 +15,6 @@
     "btnSubmit": "Отправить",
     "footerText": "© Домен припаркован с помощью сервиса",
     "footerAdminInfo": "Сервис SigmaParking не является администратором домена {domainName}",
-    "feedbackSuccess": "Ваше сообщение успешно отправлено"
+    "feedbackSuccess": "Ваше сообщение успешно отправлено",
+    "contactMessage": "Я заинтересован в приобретении домена {domainName}"
 }
