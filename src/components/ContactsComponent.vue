@@ -6,12 +6,11 @@
       <div v-if="telegramContact" class="contact-item">
         <div class="contact-icon">
 			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<circle cx="12" cy="12" r="12" fill="#0088CC"/>
-				<path d="M5.491 11.74l11.57-4.461c.537-.194 1.006.131.832.943l.001-.001-1.97 9.281c-.146.658-.537.818-1.084.508l-3-2.211-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121L8.814 13.47l-2.895-.924c-.631-.196-.64-.631.135-.931z" fill="white"/>
+				<path d="M5.491 11.74l11.57-4.461c.537-.194 1.006.131.832.943l.001-.001-1.97 9.281c-.146.658-.537.818-1.084.508l-3-2.211-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121L8.814 13.47l-2.895-.924c-.631-.196-.64-.631.135-.931z" fill="currentColor"/>
 			</svg>
         </div>
         <a :href="`https://t.me/${telegramContact.replace('@', '')}`" target="_blank" class="contact-link">
-          {{ telegramContact }}
+          Telegram
         </a>
       </div>
 
@@ -23,7 +22,7 @@
           </svg>
         </div>
         <a :href="`https://wa.me/${whatsappContact.replace(/[^0-9]/g, '')}`" target="_blank" class="contact-link">
-          +{{ whatsappContact }}
+          Whatsapp
         </a>
       </div>
 
