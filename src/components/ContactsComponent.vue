@@ -30,7 +30,15 @@
       <div v-if="contactmaxContact" class="contact-item">
         <div class="contact-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M4 17.5V6.5c0-.83.67-1.5 1.5-1.5h1.35c.52 0 1 .27 1.27.72L12 12.2l3.88-6.48c.27-.45.75-.72 1.27-.72h1.35c.83 0 1.5.67 1.5 1.5v11c0 .83-.67 1.5-1.5 1.5S17 18.33 17 17.5V10.2l-3.32 5.54c-.36.6-.99.96-1.68.96s-1.32-.36-1.68-.96L7 10.2v7.3c0 .83-.67 1.5-1.5 1.5S4 18.33 4 17.5z" fill="currentColor"/>
+            <rect width="24" height="24" rx="6" fill="url(#maxLogoGradient)"/>
+            <path d="M4.64 16.84C3.96 14.08 4.29 10.9 5.83 8.62C7.43 6.27 10.15 4.96 13.03 5.08C16.48 5.22 19.12 7.6 19.2 10.88C19.29 14.41 16.57 17.08 12.83 17.23C11.43 17.29 10.15 16.99 9.08 16.39L7.58 17.69C6.38 18.72 4.99 18.27 4.64 16.84ZM8.34 9.98C7.6 11.22 7.41 12.99 7.76 14.61L8.49 13.98C8.96 13.58 9.64 13.55 10.13 13.92C10.87 14.48 11.8 14.77 12.73 14.74C15.07 14.64 16.62 13.09 16.57 10.94C16.53 9.13 15.06 7.68 12.93 7.59C11.08 7.51 9.3 8.38 8.34 9.98Z" fill="white"/>
+            <defs>
+              <linearGradient id="maxLogoGradient" x1="2" y1="21" x2="22" y2="3" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#35C8F4"/>
+                <stop offset="0.45" stop-color="#2F63F6"/>
+                <stop offset="1" stop-color="#A83BE8"/>
+              </linearGradient>
+            </defs>
           </svg>
         </div>
         <a :href="contactmaxContact" target="_blank" class="contact-link">
