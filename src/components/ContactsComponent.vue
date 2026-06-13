@@ -26,6 +26,18 @@
         </a>
       </div>
 
+      <!-- MAX -->
+      <div v-if="contactmaxContact" class="contact-item">
+        <div class="contact-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M4 17.5V6.5c0-.83.67-1.5 1.5-1.5h1.35c.52 0 1 .27 1.27.72L12 12.2l3.88-6.48c.27-.45.75-.72 1.27-.72h1.35c.83 0 1.5.67 1.5 1.5v11c0 .83-.67 1.5-1.5 1.5S17 18.33 17 17.5V10.2l-3.32 5.54c-.36.6-.99.96-1.68.96s-1.32-.36-1.68-.96L7 10.2v7.3c0 .83-.67 1.5-1.5 1.5S4 18.33 4 17.5z" fill="currentColor"/>
+          </svg>
+        </div>
+        <a :href="contactmaxContact" target="_blank" class="contact-link">
+          MAX
+        </a>
+      </div>
+
       <!-- Phone -->
       <div v-if="phoneContact" class="contact-item">
         <div class="contact-icon">
@@ -60,12 +72,14 @@ export default {
     // Получаем контактные данные из мета-тегов
     const telegramMeta = document.head.querySelector('meta[name="telegramusername"]');
     const whatsappMeta = document.head.querySelector('meta[name="whatsapp"]');
+    const contactmaxMeta = document.head.querySelector('meta[name="contactmax"]');
     const phoneMeta = document.head.querySelector('meta[name="phone"]');
     const emailMeta = document.head.querySelector('meta[name="email"]');
     const domainMeta = document.head.querySelector('meta[name="domain-name"]');
 
     this.telegramContact = telegramMeta ? telegramMeta.getAttribute('content') : '';
     this.whatsappContact = whatsappMeta ? whatsappMeta.getAttribute('content') : '';
+    this.contactmaxContact = contactmaxMeta ? contactmaxMeta.getAttribute('content') : '';
     this.phoneContact = phoneMeta ? phoneMeta.getAttribute('content') : '';
     this.emailContact = emailMeta ? emailMeta.getAttribute('content') : '';
     this.domainName = domainMeta ? domainMeta.getAttribute('content') : '';
@@ -88,6 +102,7 @@ export default {
     return {
       telegramContact: '',
       whatsappContact: '',
+      contactmaxContact: '',
       phoneContact: '',
       emailContact: '',
       domainName: ''
