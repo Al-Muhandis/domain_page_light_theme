@@ -12,7 +12,7 @@
         class="btn btn-large"
         id="shopbtn"
       >
-        {{ $t("btnBuyNow") }}
+        {{ buttonLabel }}
       </button>
     </div>
     <div v-if="!ONLY_BUTTON" class="right_content">
@@ -38,7 +38,15 @@ export default {
   mounted() {
     const metaTagValue = document.head.querySelector('meta[name="shopuri"]').content;
     this.metaTagValue = metaTagValue;
-    const aOnClick = 'window.location.href = "' + metaTagValue + '"';
+    
+    let onClickUrl = metaTagValue;
+    
+    // If admin contact mode, generate admin contact URL
+    if (this.ADMIN_CONTACT) {
+      onClickUrl = `https://www.reg.ru/whois/admin_contact?dname=${encodeURIComponent(this.domainName)}`;
+    }
+    
+    const aOnClick = 'window.location.href = "' + onClickUrl + '"';
     this.aOnClick = aOnClick;
   },
   data() {
@@ -47,9 +55,17 @@ export default {
       ONLY_FORM: process.env.ONLY_FORM,
       ONLY_BUTTON: process.env.ONLY_BUTTON,
       ONLY_CONTACTS: process.env.ONLY_CONTACTS,
-      IS_SALE: process.env.IS_SALE
+      IS_SALE: process.env.IS_SALE,
+      ADMIN_CONTACT: process.env.ADMIN_CONTACT
     };
-  },  
+  },
+  computed: {
+    buttonLabel() {
+      return this.ADMIN_CONTACT 
+        ? this.$t("btnContactOwner") 
+        : this.$t("btnBuyNow");
+    }
+  }
 };
 </script>
 
