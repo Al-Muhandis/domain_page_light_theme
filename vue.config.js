@@ -14,6 +14,7 @@ const onlyButton = args.onlybutton === 'true'
 const onlyContacts = args.onlycontacts === 'true'
 const outputDir = path.resolve(__dirname, `dist${publicPath}`)
 const isSale = args.issale === 'true'
+const adminContact = args.admincontact === 'true'
 
 module.exports = defineConfig({
   publicPath: publicPath,
@@ -28,6 +29,7 @@ module.exports = defineConfig({
         'process.env.ONLY_BUTTON': JSON.stringify(onlyButton),
         'process.env.ONLY_CONTACTS': JSON.stringify(onlyContacts),
         'process.env.IS_SALE': JSON.stringify(isSale),
+        'process.env.ADMIN_CONTACT': JSON.stringify(adminContact),
       }),
     ],
   },

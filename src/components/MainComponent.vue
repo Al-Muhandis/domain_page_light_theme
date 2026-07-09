@@ -12,7 +12,7 @@
         class="btn btn-large"
         id="shopbtn"
       >
-        {{ $t("btnBuyNow") }}
+        {{ $t(ADMIN_CONTACT ? "contactsTitle" : "btnBuyNow") }}
       </button>
     </div>
     <div v-if="!ONLY_BUTTON" class="right_content">
@@ -47,7 +47,8 @@ export default {
       ONLY_FORM: process.env.ONLY_FORM,
       ONLY_BUTTON: process.env.ONLY_BUTTON,
       ONLY_CONTACTS: process.env.ONLY_CONTACTS,
-      IS_SALE: process.env.IS_SALE
+      IS_SALE: process.env.IS_SALE,
+      ADMIN_CONTACT: process.env.ADMIN_CONTACT
     };
   },  
 };
