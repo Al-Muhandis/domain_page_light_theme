@@ -27,7 +27,7 @@ npm run build -- --publicpath=/templates/button/ --onlyform=false --onlybutton=t
 npm run build -- --publicpath=/templates/inquiry/ --onlyform=true --onlybutton=false --issale=false
 npm run build -- --publicpath=/templates/saleinquiry/ --onlyform=true --onlybutton=false --issale=true
 npm run build -- --publicpath=/templates/contacts/ --onlycontacts=true --onlybutton=false --issale=true
-npm run build -- --publicpath=/templates/button-contact/ --onlycontacts=true --onlybutton=false --issale=true --buttoncontact=true
+npm run build -- --publicpath=/templates/button-contact/ --onlycontacts=false --onlybutton=true --issale=false --admincontact=true
 ```
 
 ### Template variants
